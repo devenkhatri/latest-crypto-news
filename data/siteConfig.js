@@ -1,9 +1,9 @@
 module.exports = {
-  siteTitle: 'gatsby-starter-morning-dew',
-  siteDescription: 'A Gatsby theme/starter to build lightning-fast websites',
-  authorName: 'Maxence Poutord',
-  twitterUsername: '_maxpou',
-  authorAvatar: 'avatar.jpeg', // file in content/images
+  siteTitle: 'Latest Crypto News',
+  siteDescription: 'News articles are fetched and refreshed every hour',
+  authorName: 'Deven Goratela',
+  twitterUsername: '',
+  authorAvatar: 'avatar.jpg', // file in content/images
   defaultLang: 'en', // show flag if lang is not default. Leave empty to enable flags in post lists
   authorDescription: `
   For the last decade, Maxence Poutord has worked with a variety of web technologies. He is currently focused on front-end development.
@@ -11,28 +11,28 @@ module.exports = {
   As a digital nomad, he is living where the WiFi and sun are 😎 <br>
   Do you want to know more? <a href="https://www.maxpou.fr/about" rel="noopener" target="_blank">Visit my website!</a>
   `,
-  siteUrl: 'https://maxpou.github.io/',
+  siteUrl: 'https://latest-crypto-news.netlify.app/',
   disqusSiteUrl: 'https://www.maxpou.fr/',
+  disqusShortname: 'maxpou',
   // Prefixes all links. For cases when deployed to maxpou.fr/gatsby-starter-morning-dew/
-  pathPrefix: '/gatsby-starter-morning-dew', // Note: it must *not* have a trailing slash.
-  siteCover: 'cover-baymax.jpeg', // file in content/images
+  pathPrefix: '/', // Note: it must *not* have a trailing slash.
+  siteCover: 'crypto-banner.jpg', // file in content/images
   background_color: '#ffffff',
   theme_color: '#222222',
   display: 'standalone',
-  icon: 'content/images/baymax.png',
+  icon: 'content/images/crypto-icon-dark.png',
   postsPerPage: 6,
-  disqusShortname: 'maxpou',
-  headerTitle: 'gatsby-starter-morning-dew',
-  headerLinksIcon: 'baymax.png', //  (leave empty to disable: '')
+  headerTitle: 'Latest Crypto News',
+  headerLinksIcon: 'crypto-icon.png', //  (leave empty to disable: '')
   headerLinks: [
-    {
-      label: 'Blog',
-      url: '/pages/1',
-    },
-    {
-      label: 'About',
-      url: '/about-gatsby-starter-morning-dew',
-    },
+    // {
+    //   label: 'Blog',
+    //   url: '/pages/1',
+    // },
+    // {
+    //   label: 'About',
+    //   url: '/about-gatsby-starter-morning-dew',
+    // },
     {
       label: 'Installation',
       url: '/how-to-install',
@@ -40,21 +40,21 @@ module.exports = {
   ],
   // Footer information (ex: Github, Netlify...)
   websiteHost: {
-    name: 'GitHub',
-    url: 'https://github.com',
+    name: 'Netlify',
+    url: 'https://netlify.com',
   },
   footerLinks: [
     {
       sectionName: 'Explore',
       links: [
-        {
-          label: 'Blog',
-          url: '/',
-        },
-        {
-          label: 'About',
-          url: '/about-gatsby-starter-morning-dew',
-        },
+        // {
+        //   label: 'Blog',
+        //   url: '/',
+        // },
+        // {
+        //   label: 'About',
+        //   url: '/about-gatsby-starter-morning-dew',
+        // },
         {
           label: 'Installation',
           url: '/how-to-install',
@@ -66,19 +66,19 @@ module.exports = {
       links: [
         {
           label: 'GitHub',
-          url: 'https://github.com/maxpou/gatsby-starter-morning-dew',
+          url: 'https://github.com/devenkhatri/latest-crypto-news',
           rel: 'external',
         },
         {
           label: 'Website',
-          url: 'https://www.maxpou.fr',
+          url: 'https://latest-crypto-news.netlify.app',
           rel: 'external',
         },
-        {
-          label: 'Twitter',
-          url: 'https://twitter.com/_maxpou',
-          rel: 'external',
-        },
+        // {
+        //   label: 'Twitter',
+        //   url: 'https://twitter.com/_maxpou',
+        //   rel: 'external',
+        // },
       ],
     },
   ],

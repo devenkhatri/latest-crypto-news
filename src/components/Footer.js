@@ -135,16 +135,6 @@ const Footer = () => {
             .
           </p>
           <p className="footer-item-text">
-            Theme using{' '}
-            <a
-              className="footer-link"
-              href="https://github.com/maxpou/gatsby-starter-morning-dew"
-            >
-              gatsby-starter-morning-dew
-            </a>
-            .
-          </p>
-          <p className="footer-item-text">
             Hosted with{' '}
             <span className="footer-heart" role="img" aria-label="Love">
               ❤

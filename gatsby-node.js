@@ -176,27 +176,21 @@ exports.createSchemaCustomization = ({ actions }) => {
 
 exports.sourceNodes = ({ actions: { createNode }, createNodeId, createContentDigest }) => {
   const axios = require('axios'); 
-  const query = `Cryptocurrency`;
-  axios.get(
-    //`https://www.googleapis.com/customsearch/v1?key=AIzaSyAY7L4Hjlijw3UxQmH-4m2dyfUxoyt2YJ8&cx=017576662512468239146:omuauf_lfve&q=Cryptocurrency`
-    `https://newsapi.org/v2/everything?q=${query}&apiKey=${process.env.NEWS_API_KEY}&pageSize=20&sortBy=publishedAt`
-  ).then((response)=>{    
-    //console.log("***** ",response)
-    if (response.status == 200) {      
-      const articles = response.data.articles;
-      // const articles = [
-      //   {
-      //     author: 'Wall Street Breakfast',
-      //     title: 'Wall Street Breakfast: Correcting The Correction?',
-      //     description: 'Listen on the go! A daily podcast of Wall Street Breakfast will be available by 8:00 a.m. on Seeking Alpha, iTunes, Stitcher and Spotify.',
-      //     url: 'https://seekingalpha.com/article/4412426-wall-street-breakfast-correcting-correction',
-      //     urlToImage: 'https://static3.seekingalpha.com/assets/og_image_192-59bfd51c9fe6af025b2f9f96c807e46f8e2f06c5ae787b15bf1423e6c676d4db.png',
-      //     publishedAt: '2021-03-09T12:16:38Z',
-      //     content: 'Listen on the go! A daily podcast of Wall Street Breakfast will be available by 8:00 a.m. on Seeking Alpha, iTunes, Stitcher and Spotify.\r\n' +
-      //       'Correcting the correction?\r\n' +
-      //       'The Nasdaq is leading the charge… [+8761 chars]'
-      //   }
-      // ]
+  const query = `cryptocurrency`;
+  // axios.get(
+  //   //`https://www.googleapis.com/customsearch/v1?key=AIzaSyAY7L4Hjlijw3UxQmH-4m2dyfUxoyt2YJ8&cx=017576662512468239146:omuauf_lfve&q=Cryptocurrency`
+  //   `https://newsapi.org/v2/everything?q=${query}&apiKey=${process.env.NEWS_API_KEY}&pageSize=20&sortBy=publishedAt`
+  // ).then((response)=>{    
+    const NewsAPI = require('newsapi');
+    const newsapi = new NewsAPI(process.env.NEWS_API_KEY);
+    newsapi.v2.everything({
+      q: query,
+      pageSize: 20,
+      language: 'en'
+    }).then(response => {
+    // console.log("*********** ",response)
+    if (response.status == 'ok') {      
+      const articles = response.articles;
       
       //now creating graphql nodes from the articles
       articles.map((article) => {
