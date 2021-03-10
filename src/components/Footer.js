@@ -140,7 +140,7 @@ const Footer = () => {
               ❤
             </span>{' '}
             by{' '}
-            <a className="footer-link" href={websiteHost.url}>
+            <a className="footer-link" href={websiteHost.url} target="_blank">
               {websiteHost.name}
             </a>
             .

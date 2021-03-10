@@ -175,24 +175,25 @@ exports.createSchemaCustomization = ({ actions }) => {
 }
 
 exports.sourceNodes = ({ actions: { createNode }, createNodeId, createContentDigest }) => {
-  const axios = require('axios'); 
+  const axios = require('axios');
   const query = `cryptocurrency`;
   // axios.get(
   //   //`https://www.googleapis.com/customsearch/v1?key=AIzaSyAY7L4Hjlijw3UxQmH-4m2dyfUxoyt2YJ8&cx=017576662512468239146:omuauf_lfve&q=Cryptocurrency`
   //   `https://newsapi.org/v2/everything?q=${query}&apiKey=${process.env.NEWS_API_KEY}&pageSize=20&sortBy=publishedAt`
   // ).then((response)=>{    
-    const NewsAPI = require('newsapi');
-    const newsapi = new NewsAPI(process.env.NEWS_API_KEY);
-    newsapi.v2.everything({
-      q: query,
-      sortBy: 'publishedAt',
-      pageSize: 20,      
-      language: 'en'
-    }).then(response => {
+  const NewsAPI = require('newsapi');
+  // const newsapi = new NewsAPI(process.env.NEWS_API_KEY);
+  const newsapi = new NewsAPI('ff7479a2864a4491abcf23f07b250037');
+  newsapi.v2.everything({
+    q: query,
+    sortBy: 'publishedAt',
+    pageSize: 20,
+    language: 'en'
+  }).then(response => {
     // console.log("*********** ",response)
-    if (response.status == 'ok') {      
+    if (response.status == 'ok') {
       const articles = response.articles;
-      
+
       //now creating graphql nodes from the articles
       articles.map((article) => {
         const nodeContent = JSON.stringify(article);
@@ -210,6 +211,6 @@ exports.sourceNodes = ({ actions: { createNode }, createNodeId, createContentDig
       });
     }
   }); //end of then
-  
-  
+
+
 };
