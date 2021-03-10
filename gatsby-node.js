@@ -185,7 +185,8 @@ exports.sourceNodes = ({ actions: { createNode }, createNodeId, createContentDig
     const newsapi = new NewsAPI(process.env.NEWS_API_KEY);
     newsapi.v2.everything({
       q: query,
-      pageSize: 20,
+      sortBy: 'publishedAt',
+      pageSize: 20,      
       language: 'en'
     }).then(response => {
     // console.log("*********** ",response)
