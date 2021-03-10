@@ -1,11 +1,11 @@
 # /.github/worfklows/main.yml
-name: Trigger Netlify Build at Every 3 hour(s)
+name: Trigger Netlify Build at Every hour
 on:
   schedule:
     # If you're also puzzled by 
     # the cron syntax check
     # -> https://crontab.guru
-    - cron: '0 */3 * * *'
+    - cron: '0 */1 * * *'
 jobs:
   build:
     name: Netlify Build Cron
