@@ -33,9 +33,13 @@ module.exports = {
     //   label: 'About',
     //   url: '/about-gatsby-starter-morning-dew',
     // },
+    // {
+    //   label: 'Installation',
+    //   url: '/how-to-install',
+    // },
     {
-      label: 'Installation',
-      url: '/how-to-install',
+      label: 'Status',
+      url: '/status',
     },
   ],
   // Footer information (ex: Github, Netlify...)
@@ -55,9 +59,13 @@ module.exports = {
         //   label: 'About',
         //   url: '/about-gatsby-starter-morning-dew',
         // },
+        // {
+        //   label: 'Installation',
+        //   url: '/how-to-install',
+        // },
         {
-          label: 'Installation',
-          url: '/how-to-install',
+          label: 'Status',
+          url: '/status',
         },
       ],
     },
