@@ -4,6 +4,7 @@ import TagList from './TagList'
 import useSiteMetadata from '../hooks/use-site-config'
 import styled from 'styled-components'
 import { Bull, ReadingTime } from './Commons'
+import Moment from 'react-moment'
 
 const News = styled.article`
   border-bottom: 1px solid rgba(214, 209, 230, 0.5);
@@ -73,7 +74,7 @@ const NewsItem = props => {
 
       <footer>
         <FooterLine>
-          <FooterLineItem>{publishedAt}</FooterLineItem>
+          <FooterLineItem><Moment>{publishedAt}</Moment></FooterLineItem>
           <Bull />
           <FooterLineItem>{author}</FooterLineItem>
         </FooterLine>

@@ -182,8 +182,8 @@ exports.sourceNodes = ({ actions: { createNode }, createNodeId, createContentDig
   //   `https://newsapi.org/v2/everything?q=${query}&apiKey=${process.env.NEWS_API_KEY}&pageSize=20&sortBy=publishedAt`
   // ).then((response)=>{    
   const NewsAPI = require('newsapi');
-  // const newsapi = new NewsAPI(process.env.NEWS_API_KEY);
-  const newsapi = new NewsAPI('ff7479a2864a4491abcf23f07b250037');
+  const newsapi = new NewsAPI(process.env.NEWS_API_KEY);
+  // const newsapi = new NewsAPI('ff7479a2864a4491abcf23f07b250037');
   newsapi.v2.everything({
     q: query,
     sortBy: 'publishedAt',
