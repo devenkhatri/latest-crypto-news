@@ -1,11 +1,11 @@
 # /.github/worfklows/main.yml
-name: Trigger Netlify Build at Every hour
+name: Trigger Netlify Build at Every 8 hours
 on:
   schedule:
     # If you're also puzzled by 
     # the cron syntax check
     # -> https://crontab.guru
-    - cron: '0 */6 * * *'
+    - cron: '0 */8 * * *'
 jobs:
   build:
     name: Netlify Build Cron
