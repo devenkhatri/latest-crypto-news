@@ -1,5 +1,5 @@
 # /.github/worfklows/main.yml
-name: Trigger Netlify Build at Every hour
+name: Trigger Netlify Build at Every 8 hours
 on:
   schedule:
     # If you're also puzzled by 
