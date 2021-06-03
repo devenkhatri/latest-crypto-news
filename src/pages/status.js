@@ -32,6 +32,7 @@ const Statuspage = (props) => {
           <h3>Build Status</h3>
           <img src="https://api.netlify.com/api/v1/badges/6b453288-3486-4c98-97da-250ee4dd22e8/deploy-status" alt="Build Status"></img>
           <hr/>
+          <h4><a href="/dashboard">Dashboard</a></h4>
         </Wrapper>
 
         

@@ -1,15 +1,15 @@
-# /.github/worfklows/main.yml
-name: Trigger Netlify Build at Every 8 hours
-on:
-  schedule:
-    # If you're also puzzled by 
-    # the cron syntax check
-    # -> https://crontab.guru
-    - cron: '0 0 * * *'
-jobs:
-  build:
-    name: Netlify Build Cron
-    runs-on: ubuntu-latest
-    steps:
-      - name: Curl request
-        run: curl -X POST -d {} https://api.netlify.com/build_hooks/6047843eda3a67e760e2d4df
+# # /.github/worfklows/main.yml
+# name: Trigger Netlify Build at Every 8 hours
+# on:
+#   schedule:
+#     # If you're also puzzled by 
+#     # the cron syntax check
+#     # -> https://crontab.guru
+#     - cron: '0 0 * * *'
+# jobs:
+#   build:
+#     name: Netlify Build Cron
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Curl request
+#         run: curl -X POST -d {} https://api.netlify.com/build_hooks/6047843eda3a67e760e2d4df

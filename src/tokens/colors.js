@@ -44,7 +44,7 @@ export const COLORS = {
   },
   wrapperShadow: {
     light: '#0000001a',
-    dark: '#00000000',
+    dark: '#0000001a',
   },
   primary: {
     light: colors.grey500,
@@ -61,6 +61,14 @@ export const COLORS = {
   h2: {
     light: colors.grey500,
     dark: colors.yellow,
+  },
+  up: {
+    light: '#198b19',
+    dark: '#00CC00',
+  },
+  down: {
+    light: '#e51717',
+    dark: '#ff4747',
   },
 }
 
