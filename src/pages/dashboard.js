@@ -92,22 +92,26 @@ const Dashboard = (props) => {
       });
       setData({
         total: {
-          current: currentData.total, 
+          current: currentData.total.toFixed(2), 
+          previous: previousData.total.toFixed(2), 
           diffAmount: (currentData.total - previousData.total).toFixed(2),
           percent: ((currentData.total - previousData.total)*100/previousData.total).toFixed(2),
         },
         binance: {
-          current: currentData.binance, 
+          current: currentData.binance.toFixed(2), 
+          previous: previousData.binance.toFixed(2), 
           diffAmount: (currentData.binance - previousData.binance).toFixed(2),
           percent: ((currentData.binance - previousData.binance)*100/previousData.binance).toFixed(2),
         },
         swissborg: {
-          current: currentData.swissborg, 
+          current: currentData.swissborg.toFixed(2), 
+          previous: previousData.swissborg.toFixed(2), 
           diffAmount: (currentData.swissborg - previousData.swissborg).toFixed(2),
           percent: ((currentData.swissborg - previousData.swissborg)*100/previousData.swissborg).toFixed(2),
         },
         trustwallet: {
-          current: currentData.trustwallet, 
+          current: currentData.trustwallet.toFixed(2), 
+          previous: previousData.trustwallet.toFixed(2), 
           diffAmount: (currentData.trustwallet - previousData.trustwallet).toFixed(2),
           percent: ((currentData.trustwallet - previousData.trustwallet)*100/previousData.trustwallet).toFixed(2),
         },
@@ -127,28 +131,29 @@ const Dashboard = (props) => {
           <DashWrapper>
           <Box>
             <BoxTitle>Total</BoxTitle>
+            <BoxAmount style={{color: 'var(--color-grey300)'}}>{data && data.total.previous}</BoxAmount>
             <BoxAmount>{data && data.total.current}</BoxAmount>
             <Data className={data && data.total.diffAmount>0?'up':'down'}>{data && data.total.diffAmount} <div>({data && data.total.percent}%)</div></Data>
           </Box>
           <Box>
             <BoxTitle>Binance</BoxTitle>
+            <BoxAmount style={{color: 'var(--color-grey300)'}}>{data && data.binance.previous}</BoxAmount>
             <BoxAmount>{data && data.binance.current}</BoxAmount>
             <Data className={data && data.binance.diffAmount>0?'up':'down'}>{data && data.binance.diffAmount} <div>({data && data.binance.percent}%)</div></Data>
           </Box>
           <Box>
             <BoxTitle>SwissBorg</BoxTitle>
+            <BoxAmount style={{color: 'var(--color-grey300)'}}>{data && data.swissborg.previous}</BoxAmount>
             <BoxAmount>{data && data.swissborg.current}</BoxAmount>
             <Data className={data && data.swissborg.diffAmount>0?'up':'down'}>{data && data.swissborg.diffAmount} <div>({data && data.swissborg.percent}%)</div></Data>
           </Box>
           <Box>
             <BoxTitle>TrustWallet</BoxTitle>
+            <BoxAmount style={{color: 'var(--color-grey300)'}}>{data && data.trustwallet.previous}</BoxAmount>
             <BoxAmount>{data && data.trustwallet.current}</BoxAmount>
             <Data className={data && data.trustwallet.diffAmount>0?'up':'down'}>{data && data.trustwallet.diffAmount} <div>({data && data.trustwallet.percent}%)</div></Data>
           </Box>
           </DashWrapper>
-        </Wrapper>
-        <Wrapper style={{maxWidth: "830px"}}>
-          <Heading>EntryOnEntry Deviation</Heading>
         </Wrapper>
       </Layout>
     );
